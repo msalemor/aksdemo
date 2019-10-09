@@ -28,8 +28,10 @@ namespace APIGateway.Controllers
         [HttpGet]
         public async Task<IEnumerable<Contact>> Get()
         {
-            
-            HttpResponseMessage response = await this.client.GetAsync(this.config["CoreContactsAPIURI"]);
+            var CoreContactsAPIURI = "http://coreapi/api/contacts";
+            if (!string.IsNullOrEmpty(this.config["CoreContactsAPIURI"]))
+                CoreContactsAPIURI = this.config["CoreContactsAPIURI"];
+            HttpResponseMessage response = await this.client.GetAsync(CoreContactsAPIURI);
             response.EnsureSuccessStatusCode();
             string json = await response.Content.ReadAsStringAsync();
             var contacts = JsonConvert.DeserializeObject<List<Contact>>(json);

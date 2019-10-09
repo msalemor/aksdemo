@@ -1,15 +1,10 @@
 ﻿version: '3'
 services:
   web:
-    build: .
+    image: "alemor/frontend"
     ports:
-    - "5000:5000"
-    volumes:
-    - .:/code
-    - logvolume01:/var/log
-    links:
-    - redis
-  redis:
-    image: redis
-volumes:
-  logvolume01: {}
+      - "8090:80"
+  apigateway:
+    image: "alemor/apigateway"
+  coreapi:
+    impage: "alemor/coreapi"

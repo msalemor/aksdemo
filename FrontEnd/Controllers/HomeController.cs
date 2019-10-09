@@ -25,7 +25,11 @@ namespace FrontEnd.Controllers
 
         public async Task<IActionResult> Index()
         {
-            HttpResponseMessage response = await this.client.GetAsync(this.config["APIGatewayCustomersURI"]);
+            var apiGatewayURI = "http://apigateway/api/customers";
+            if (!string.IsNullOrEmpty(this.config["APIGatewayCustomersURI"]))
+                apiGatewayURI = this.config["APIGatewayCustomersURI"];
+
+            HttpResponseMessage response = await this.client.GetAsync(apiGatewayURI);
             response.EnsureSuccessStatusCode();
             string json = await response.Content.ReadAsStringAsync();
             var contacts = JsonConvert.DeserializeObject<List<Contact>>(json);
