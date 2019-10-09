@@ -23,6 +23,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", 
 		0.create-client.sh = 0.create-client.sh
 		1.deploy-cluster.sh = 1.deploy-cluster.sh
 		2.deploy-acr.sh = 2.deploy-acr.sh
+		3.Dockerfile-CoreAPI = 3.Dockerfile-CoreAPI
+		4.Dockerfile-APIGateway = 4.Dockerfile-APIGateway
+		Dockerfile-FrontEnd = Dockerfile-FrontEnd
 	EndProjectSection
 EndProject
 Global
