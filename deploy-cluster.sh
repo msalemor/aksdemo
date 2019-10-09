@@ -10,8 +10,8 @@ VNET_ADDRESS_PREFIX="10.0.0.0/8" # Ex. "10.0.0.0/8"
 VNET_SUBNET_PREFIX="10.240.0.0/16" # Ex. "10.240.0.0/16"
 AKS_VNET_SUBNET_NAME=akssubnet
 #SP_NAME="http://alemor1sp"
-SP_ID="93020f3a-85ce-4a3c-b330-805c40860b81"
-SP_PASSWORD="f0106df2-e712-403c-a46b-418e3881c2f2"
+SP_ID="--GET SP ID--"
+SP_PASSWORD="--GET SP PWD--"
 
 # Enable AKS Preview Feature Extensions
 az extension add --name aks-preview
