@@ -1,0 +1,8 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: coreapi-service
+spec:
+  type: ClusterIP
+  selector:
+    app: coreapi
