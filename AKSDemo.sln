@@ -25,9 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", 
 		deploy-acr.sh = deploy-acr.sh
 		deploy-cluster.sh = deploy-cluster.sh
 		docker-compose.yaml = docker-compose.yaml
-		Dockerfile-APIGateway.Dockerfile-APIGateway = Dockerfile-APIGateway.Dockerfile-APIGateway
-		Dockerfile-CoreAPI.Dockerfile-CoreAPI = Dockerfile-CoreAPI.Dockerfile-CoreAPI
-		Dockerfile-FrontEnd.Dockerfile-FrontEnd = Dockerfile-FrontEnd.Dockerfile-FrontEnd
+		Dockerfile-APIGateway = Dockerfile-APIGateway
+		Dockerfile-CoreAPI = Dockerfile-CoreAPI
+		Dockerfile-FrontEnd = Dockerfile-FrontEnd
 	EndProjectSection
 EndProject
 Global
