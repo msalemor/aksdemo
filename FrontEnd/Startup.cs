@@ -41,6 +41,9 @@ namespace FrontEnd
                 .Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
             services.AddSingleton(client);
+
+            var value = Configuration["APIGatewayCustomersURI"];
+            Console.WriteLine($"Value for APIGatewayCustomersURI: {value}");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
