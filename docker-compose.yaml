@@ -1,10 +1,10 @@
 ﻿version: '3'
 services:
-  web:
+  frontend:
     image: "alemor/frontend"
     ports:
       - "8090:80"
   apigateway:
     image: "alemor/apigateway"
   coreapi:
-    impage: "alemor/coreapi"
+    image: "alemor/coreapi"
