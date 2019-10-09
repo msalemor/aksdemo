@@ -9,3 +9,7 @@ A sample solution leveraging Docker, ACR, and AKS
 - Add Dockerfiles to projects
 - Build images
 - Push images to ACR
+- Test in Docker
+- Get Kubernetes credentials
+- Create YAML files for Kubernetes
+- Test Kubernetes

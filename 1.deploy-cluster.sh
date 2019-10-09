@@ -65,7 +65,7 @@ az aks create \
     --min-count 3 \
     --max-count 6 \
     --generate-ssh-keys \
-    --network-plugin azure \
+    --network-plugin azure \ #CNI
     --service-cidr 172.21.0.0/16 \
     --dns-service-ip 172.21.0.10 \
     --docker-bridge-address 172.17.0.1/16 \
@@ -73,5 +73,3 @@ az aks create \
     --service-principal $SP_ID \
     --client-secret $SP_PASSWORD \
     --network-policy azure
-
-
