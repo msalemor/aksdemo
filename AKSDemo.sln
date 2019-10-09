@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", 
 		3.Dockerfile-CoreAPI = 3.Dockerfile-CoreAPI
 		4.Dockerfile-APIGateway = 4.Dockerfile-APIGateway
 		5.Dockerfile-FrontEnd = 5.Dockerfile-FrontEnd
+		build-images.sh = build-images.sh
+		docker-compose.yaml = docker-compose.yaml
 	EndProjectSection
 EndProject
 Global
