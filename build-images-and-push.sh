@@ -1,6 +1,7 @@
 ﻿
 # Always a good practice to use a version
 ver=$(date +"%Y%m%d%H%M")
+#docker build -t alemor/coreapi:$ver -f Dockerfile-CoreAPI .
 
 # Build the images
 docker build -t alemor/coreapi -f Dockerfile-CoreAPI .
