@@ -2,15 +2,30 @@
 
 A sample solution leveraging Docker, ACR, and AKS.
 
+## Concepts
+
+- Docker
+  - Build Images
+  - Tag and Push Images
+- AKS
+  - Create Service Principal
+  - Create AKS Cluster
+    - Kubenet vs CNI
+  - Create Azure Container Registry
+- Kubernetes
+  - Deployments
+  - Services
+    - LoadBalancer (Internal/External)
+    - ClusterIP
 ## Steps
 
 - Develop and test the .Net Core services locally
-- Create the service principal in Azure
+- Create the service principal in Azure Cloud Shell
   - Run: ```sh create-service-principal.sh```
-- Deploy AKS Cluster
+- Deploy AKS Cluster in Azure Cloud Shell
   - Run: ```sh deploy.sh```
   - Select kubenet or CNI
-- Create an Azure Container Registry (ACR)
+- Create an Azure Container Registry (ACR) in Azure Cloud Shell
   - Run: ```sh deploy-acr.sh```
 - Create the docker files to build the images for:
   - FrontEnd: ```Dockerfile-FrontEnd```
@@ -32,6 +47,12 @@ A sample solution leveraging Docker, ACR, and AKS.
   - FrontEnd
     - frontend-deployment.yaml
     - frontend-service.yaml 
-- Deploy the kubernetes deployments and services
-  - ```kubectl apply -f coreapi-deployment.yaml```
-  - ```kubectl apply -f coreapi-service.yaml```
+- Deploy the kubernetes deployments and services:
+  - ClusterIP Deployments and Services
+      - ```kubectl apply -f coreapi-deployment.yaml```
+      - ```kubectl apply -f coreapi-service.yaml```
+      - ```kubectl apply -f apigwateway-deployment.yaml```
+      - ```kubectl apply -f apigwateway-service.yaml```
+  - LoadBalancer Deployment and Service
+    - ```kubectl apply -f frontend-deployment.yaml```
+    - ```kubectl apply -f frontend-service.yaml```
