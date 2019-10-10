@@ -15,3 +15,5 @@ spec:
       containers:
       - name: apigateway-pod
         image: alemoracr.azurecr.io/alemor/apigateway
+        ports:
+        - containerPort: 80

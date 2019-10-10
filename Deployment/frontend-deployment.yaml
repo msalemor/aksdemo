@@ -15,5 +15,5 @@ spec:
       containers:
       - name: frontend-pod
         image: alemoracr.azurecr.io/alemor/frontend
-		ports:
+        ports:
         - containerPort: 80

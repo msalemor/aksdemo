@@ -15,3 +15,5 @@ spec:
       containers:
       - name: coreapi-pod
         image: alemoracr.azurecr.io/alemor/coreapi
+        ports:
+        - containerPort: 80

@@ -1,7 +1,7 @@
 ﻿apiVersion: v1
 kind: Service
 metadata:  
-  name: coreapi-service
+  name: coreapi
 spec:
   selector:    
     app: coreapi
