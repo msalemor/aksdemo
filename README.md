@@ -1,22 +1,46 @@
-# AKS Demo
+# Container App Modernization Demo
 
-A sample solution leveraging Docker, ACR, and AKS.
+A sample solution leveraging Docker, Azure Container Registry (ACR), and Azure Kubernetes Services (AKS).
 
 ## Concepts
 
 - Docker
-  - Build Images
-  - Tag and Push Images
+  - Develop, build and test code
+  - Build the images
+  - Tag and push the mages
+  - Security:
+    - Update the base images regularly
+  - Skills:
+    - Development
+    - Configuration Management
+    - Docker
+    - DevOps
 - AKS
-  - Create Service Principal
   - Create AKS Cluster
+    - Service Principal
+    - Access to the network through roles
     - Kubenet vs CNI
   - Create Azure Container Registry
+    - Access to AKS cluster through roles
+  - Security:
+    - Check and apply node security updates and reboot the nodes
+  - Skills:
+    - Azure
+    - Instrastructure-as-code
+    - Networking
+    - Governance
+  - Check and apply node security updates and reboot the nodes
+  - 
 - Kubernetes
   - Deployments
+    - ReplicaSets
+    - Set Limits
+    - Security Context
+    - Network policies
   - Services
     - LoadBalancer (Internal/External)
     - ClusterIP
+
 ## Solution Diagram
 
 ![Solution Diagram](Diagram.png)
