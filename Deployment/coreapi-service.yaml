@@ -1,8 +1,13 @@
 ﻿apiVersion: v1
 kind: Service
-metadata:
+metadata:  
   name: coreapi-service
 spec:
-  type: ClusterIP
-  selector:
+  selector:    
     app: coreapi
+  type: ClusterIP
+  ports:  
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP

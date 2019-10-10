@@ -1,8 +1,13 @@
 ﻿apiVersion: v1
 kind: Service
-metadata:
+metadata:  
   name: apigateway-service
 spec:
-  type: ClusterIP
-  selector:
+  selector:    
     app: apigateway
+  type: ClusterIP
+  ports:  
+  - name: http
+    port: 80
+    targetPort: 80
+    protocol: TCP

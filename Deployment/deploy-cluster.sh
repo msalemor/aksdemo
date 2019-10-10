@@ -73,3 +73,6 @@ az aks create \
     --service-principal $SP_ID \
     --client-secret $SP_PASSWORD \
     --network-policy azure
+
+echo "Getting the kubernetes credentials"
+ az aks get-credentials --resource-group $RESOURCE_GROUP_NAME --name $CLUSTER_NAME 
