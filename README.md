@@ -24,6 +24,7 @@ A sample solution leveraging Docker, ACR, and AKS.
 ## Steps
 
 - Develop and test the .Net Core services locally
+  - Review the hostnames in FrontEnd to access the APIGateway, and in APIGateway to access the CoreAPI
 - Create the service principal in Azure Cloud Shell
   - Run: ```sh create-service-principal.sh```
 - Deploy AKS Cluster in Azure Cloud Shell
