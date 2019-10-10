@@ -17,9 +17,11 @@ A sample solution leveraging Docker, Azure Container Registry (ACR), and Azure K
     - DevOps
 - AKS
   - Create AKS Cluster
+    - Deploy cluster from the CLI, there are more options to set
     - Service Principal
-    - Access to the network through roles
-    - Kubenet vs CNI
+    - Create a VNet and subnet
+    - Give the SP access to the VNET as a contributor
+    - Networking: Kubenet vs CNI
   - Create Azure Container Registry
     - Access to AKS cluster through roles
   - Security:
