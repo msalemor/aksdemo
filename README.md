@@ -17,6 +17,10 @@ A sample solution leveraging Docker, ACR, and AKS.
   - Services
     - LoadBalancer (Internal/External)
     - ClusterIP
+## Solution Diagram
+
+![Solution Diagram](Diagram.png)
+
 ## Steps
 
 - Develop and test the .Net Core services locally
