@@ -38,6 +38,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", 
 		Deployment\frontend-service.yaml = Deployment\frontend-service.yaml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blocking", "Blocking", "{556354E8-504F-4DED-AEF5-38DF8DA9664C}"
+	ProjectSection(SolutionItems) = preProject
+		Blocking\Dockerfile = Blocking\Dockerfile
+		Blocking\go.mod = Blocking\go.mod
+		Blocking\main.go = Blocking\main.go
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
