@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"math"
 	"os"
 	"runtime"
 	"strconv"
@@ -23,7 +24,8 @@ func main() {
 
 	// Get the parameters from the command lines
 	var waitPtr = flag.Int("wait", 5, "seconds to wait before blocking")
-	var secPtr = flag.Int("time", 30, "seconds at 100% cpu")
+	var secPtr = flag.Int("time", 30, "seconds to block")
+	var perPtr = flag.Int("per", 100, "target cpu percentace 25,50,75,100")
 	flag.Parse()
 
 	waitStr := os.Getenv("WAIT_TIME")
@@ -35,11 +37,22 @@ func main() {
 
 	// Wait before blocking
 	fmt.Printf("Waiting %v seconds before blocking\n", *waitPtr)
-	time.Sleep(time.Second * time.Duration(*waitPtr))
 
 	// Start blocking
-	cpus := runtime.NumCPU()
-	fmt.Printf("Blocking for %v seconds. Number of CPUs: %v\n", *secPtr, cpus)
+	totalCpus := float64(runtime.NumCPU())
+	perTotal := float64(*perPtr) / 100
+	cpus := int(math.Ceil(totalCpus * perTotal))
+
+	if cpus > int(totalCpus) {
+		cpus = int(totalCpus)
+	}
+
+	if cpus < 1 {
+		cpus = 1
+	}
+
+	fmt.Println(totalCpus, perTotal)
+	fmt.Printf("Blocking for %v seconds. Number of CPUs: %v at %v%%\n", *secPtr, cpus, *perPtr)
 
 	// Block every CPU in the system
 	for i := 0; i < cpus; i++ {
