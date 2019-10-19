@@ -51,7 +51,6 @@ func main() {
 		cpus = 1
 	}
 
-	fmt.Println(totalCpus, perTotal)
 	fmt.Printf("Blocking for %v seconds. Number of CPUs: %v at %v%%\n", *secPtr, cpus, *perPtr)
 
 	// Block every CPU in the system
